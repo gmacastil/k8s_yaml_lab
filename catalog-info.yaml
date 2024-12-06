@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: gmacastil/k8s_yaml_lab
+    sonarqube.org/project-key: k8s_yaml_lab
+  description: "Repositorio para la configuraci\xF3n y despliegue de aplicaciones\
+    \ en Kubernetes utilizando archivos YAML"
+  name: k8s_yaml_lab
+  tags:
+  - kubernetes
+  - yaml
+spec:
+  lifecycle: production
+  owner: gmacastil
+  system: dummy
+  type: service
