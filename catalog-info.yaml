@@ -1,18 +1,35 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
+  name: k8s_yaml_lab
+  description: Repositorio para la configuración y despliegue de aplicaciones en Kubernetes utilizando archivos YAML
   annotations:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: gmacastil/k8s_yaml_lab
     sonarqube.org/project-key: k8s_yaml_lab
-  description: Repositorio para la configuración y despliegue de aplicaciones en Kubernetes
-    utilizando archivos YAML
-  name: k8s_yaml_lab
   tags:
-  - kubernetes
-  - yaml
+    - kubernetes
+    - yaml
 spec:
-  lifecycle: production
-  owner: gmacastil
-  system: dummy
   type: service
+  owner: gmacastil
+  lifecycle: production
+  system: discovery
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: k8s_yaml_lab-api
+  description: Repositorio para la configuración y despliegue de aplicaciones en Kubernetes utilizando archivos YAML
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - kubernetes
+    - yaml
+spec:
+  type: openapi
+  owner: gmacastil
+  lifecycle: production
+  system: discovery
+  definition: 
+    $text: /docs/openapi.yaml
